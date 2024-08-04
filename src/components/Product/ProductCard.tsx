@@ -33,7 +33,7 @@ export const ProductCard = React.forwardRef<
     ref,
   ) => {
     return (
-      <Card>
+      <Card className="flex flex-col justify-between">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
@@ -41,9 +41,9 @@ export const ProductCard = React.forwardRef<
         <CardContent>
           <div className="flex items-center justify-between">
             {icon && (
-              <div className="flex h-10 w-10 min-w-10 shrink-0 items-center justify-center rounded-lg bg-card/40">
+              <div className="flex h-10 w-10 min-w-10 shrink-0 items-center justify-center rounded-full border border-primary/40 text-primary">
                 <svg
-                  className="h-5 w-5 text-muted-foreground group-hover/menu-item:text-foreground group-focus-visible/menu-item:text-foreground"
+                  className="h-6 w-6 text-muted-foreground group-hover/menu-item:text-foreground group-focus-visible/menu-item:text-foreground"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
